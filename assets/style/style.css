@@ -1,6 +1,104 @@
 @charset "UTF-8";
 
+
+:root {
+    --cor0: #ffffff;
+    --cor1: #031321;
+    --cor2: #2196f3;
+    --cor3: #5a5a5a;
+    --sombra: #09375f;
+
+    --fonte-padrao: sans-serif;
+    --fonte-destaque: consolas;
+}
+
 * {
     margin: 0px;
     padding: 0px;
+    font-family: var(--fonte-padrao);
+}
+
+body {
+    background-color: var(--cor1);
+}
+
+#box {
+    background-color: var(--cor1);
+    color: var(--cor2);
+    border: solid var(--cor2);
+    width: 350px;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+}
+
+#box:hover {
+    box-shadow: 3px 3px 30px 10px var(--sombra);
+    transition-delay: 0.5s;
+}
+
+#box input[type="email"], input[type="password"] {
+    color: var(--cor0);
+    font-family: sans-serif;
+    background-color: var(--cor1);
+    display: block;
+    margin: 20px auto;
+    padding: 15px 10px;
+    width: 230px;
+    text-align: center;
+    outline: none;
+    border-color: var(--cor2);
+    border-radius: 27px;
+    transition: 0.20s;
+
+}
+
+#box input[type="email"]:focus, input[type="password"]:focus {
+    width: 300px;
+    text-align: center;
+    color: var(--cor0);
+}
+
+h1 {
+    font-family: var(--fonte-destaque);
+    font-size: 2em;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+#fp {
+    font-size: 0.8em;
+    margin-bottom: 25px;
+    color: var(--cor3);
+}
+
+#su {
+    font-size: 1em;
+    margin: 15px 20px;
+}
+
+button {
+    font-family: var(--fonte-destaque);
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    width: 130px;
+    padding: 15px 10px;
+    color: var(--cor2);
+    border-color: var(--cor2);
+    background-color: var(--cor1);
+    font-weight: bolder;
+
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: var(--cor2);
+    color: var(--cor1);
+    box-shadow: 0 0 10px var(--cor2), 0 0 40px var(--cor2);
+    transition-delay: 1.5s;
 }
